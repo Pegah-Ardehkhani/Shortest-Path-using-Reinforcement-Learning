@@ -119,8 +119,6 @@ After the algorithm finishes training, the program will visualize the graph usin
 - **Goal node**: Yellow.
 - **Other nodes**: Blue.
 - **Path edges**: Green (if found by the algorithm), gray (if not part of the path).
-  
-...
 
 ## Algorithm Details
 
