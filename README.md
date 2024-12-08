@@ -105,8 +105,8 @@ Path length: 10.5
 After the algorithm finishes training, the program will visualize the graph using `matplotlib`. Nodes will be color-coded:
 - **Start node**: Red.
 - **Goal node**: Yellow.
-- **Other nodes**: Light blue.
-- **Path edges**: Green (if found by the algorithm), gray (if not part of the path).
+- **Other nodes**: Blue.
+- **Path edges**: Green (found by the algorithm), gray (if not part of the path).
 
 ## Algorithm Details
 
