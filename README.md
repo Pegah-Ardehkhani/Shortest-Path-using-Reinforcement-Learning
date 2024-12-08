@@ -119,6 +119,8 @@ After the algorithm finishes training, the program will visualize the graph usin
 - **Goal node**: Yellow.
 - **Other nodes**: Blue.
 - **Path edges**: Green (if found by the algorithm), gray (if not part of the path).
+  
+...
 
 ## Algorithm Details
 
@@ -165,7 +167,7 @@ Where:
 
 SARSA(λ) enhances learning by updating not just the current state-action pair but also previously visited state-action pairs, speeding up the convergence process.
 
-### Application
+## Application
 
 **Pathfinding in Graphs**
 
