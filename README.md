@@ -140,16 +140,13 @@ SARSA uses an **epsilon-greedy** policy to choose actions, exploring with a prob
 ### **SARSA(λ)**
 SARSA(λ) is an extension of SARSA that incorporates **eligibility traces** to allow faster learning by updating multiple state-action pairs during a single transition. The eligibility trace acts as a memory, allowing previous state-action pairs to contribute to the update. The update rule is:
 
-\[
-Q(s, a) \leftarrow Q(s, a) + \alpha \left[ R + \gamma Q(s', a') - Q(s, a) \right] \cdot E(s, a)
-\]
-\[
-E(s, a) \leftarrow \gamma \lambda E(s, a)
-\]
+$Q(s, a) \leftarrow Q(s, a) + \alpha \left[ R + \gamma Q(s', a') - Q(s, a) \right] \cdot E(s, a)$
+
+$E(s, a) \leftarrow \gamma \lambda E(s, a)$
 
 Where:
-- \( E(s, a) \) is the eligibility trace for state \( s \) and action \( a \),
-- \( \lambda \) is the trace decay factor (0 ≤ \( \lambda \) ≤ 1), controlling how much influence previous state-action pairs have on updates.
+- $( E(s, a) )$ is the eligibility trace for state $( s )$ and action $( a )$,
+- $( \lambda )$ is the trace decay factor $(0 ≤ \( \lambda ) ≤ 1)$, controlling how much influence previous state-action pairs have on updates.
 
 SARSA(λ) enhances learning by updating not just the current state-action pair but also previously visited state-action pairs, speeding up the convergence process.
 
