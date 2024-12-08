@@ -165,6 +165,30 @@ Where:
 
 SARSA(λ) enhances learning by updating not just the current state-action pair but also previously visited state-action pairs, speeding up the convergence process.
 
+### Application
+
+**Pathfinding in Graphs**
+
+The primary application of the reinforcement learning (RL) algorithms implemented in this project—**Q-learning**, **SARSA**, and **SARSA(λ)**—is to find the optimal path in a weighted graph. These algorithms can be applied to a wide range of pathfinding problems, such as:
+
+1. **Logistics and Supply Chain**: In logistics and supply chain management, reinforcement learning (RL) can be leveraged to optimize the routing of goods through a network of distribution centers and transportation routes. In this context, the nodes of the graph represent distribution centers or warehouses, while the edges represent transportation routes, each with varying costs such as time, fuel consumption, or shipping expenses. Using RL algorithms like Q-learning or SARSA, an agent can learn to navigate this network, adjusting routes dynamically based on real-time factors such as traffic, weather, or demand fluctuations. The agent’s goal is to minimize overall delivery time, reduce transportation costs, or balance both objectives, making the supply chain more efficient and cost-effective. Over time, the agent refines its decisions through trial and error, continuously improving its routing strategy based on past experiences.
+
+2. **Route Planning**: RL algorithms can be used in navigation systems (e.g., autonomous vehicles or robotics) to determine the most efficient route between two points in a road network, factoring in travel costs or distances as edge weights.
+
+3. **Network Optimization**: In computer networks or communication systems, these algorithms can help in optimizing data routing, where each edge may represent latency, bandwidth, or cost, and the goal is to find the most efficient communication path.
+
+4. **Games and Simulations**: Pathfinding algorithms are widely used in video games for AI agents to find the shortest or most strategic path across a game map. These algorithms can simulate decision-making in dynamic environments, such as in maze-solving or combat scenarios.
+
+**Reinforcement Learning for Dynamic Environments**
+
+The RL algorithms presented here are particularly valuable in dynamic and uncertain environments where the agent must learn through trial and error. For example:
+
+- **Energy-efficient Routing**: In sensor networks or drone delivery systems, RL can optimize energy consumption by finding paths that balance distance with power efficiency.
+- **Dynamic Traffic Management**: In real-time traffic systems, RL can dynamically adjust routes for vehicles based on changing traffic conditions, accidents, or road closures.
+- **Robotic Path Planning**: In robotics, an agent can use these RL algorithms to plan paths while navigating through unknown or complex terrains, adjusting its strategy based on learned experiences from the environment.
+
+These algorithms provide powerful tools for optimization in real-world applications, where the environment is not fully known upfront, and the agent must learn from interactions.
+
 ## Conclusion
 
 The **ShortestPathFinder** framework offers a simple yet powerful way to apply reinforcement learning to pathfinding problems in graphs. By visualizing both the initial graph and the learned path, users can gain insights into the algorithm's performance and decision-making process.
