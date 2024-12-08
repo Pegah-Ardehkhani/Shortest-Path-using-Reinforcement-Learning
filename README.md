@@ -114,6 +114,51 @@ After the algorithm finishes training, the program will visualize the graph usin
 - **SARSA**: Similar to Q-learning, but updates are based on the action actually taken (on-policy).
 - **SARSA(λ)**: An extension of SARSA with eligibility traces, allowing faster learning.
 
+- **Q-learning**
+Q-learning is an off-policy reinforcement learning algorithm where the agent learns the optimal action-value function without requiring the environment to follow the same policy. The agent updates the Q-values by using the Bellman equation:
+
+$Q(s, a) \leftarrow Q(s, a) + \alpha \left[ R + \gamma \max_{a'} Q(s', a') - Q(s, a) \right]$
+
+Where:
+- $( Q(s, a) )$ is the Q-value for state $( s )$ and action $( a )$,
+- $( \alpha )$ is the learning rate,
+- $( R )$ is the reward received after taking action $( a )$ in state $( s )$,
+- $( \gamma )$ is the discount factor for future rewards,
+- $( \max_{a'} Q(s', a') )$ is the maximum Q-value for the next state $( s' )$.
+
+The agent explores the environment using an **epsilon-greedy** strategy, balancing exploration (random actions) with exploitation (choosing the action with the highest Q-value).
+
+### **SARSA**
+SARSA (State-Action-Reward-State-Action) is an on-policy algorithm, meaning it updates Q-values based on the action the agent actually takes, rather than the optimal action (like Q-learning). The SARSA update rule is:
+
+\[
+Q(s, a) \leftarrow Q(s, a) + \alpha \left[ R + \gamma Q(s', a') - Q(s, a) \right]
+\]
+
+Where:
+- \( Q(s, a) \) is the Q-value for state \( s \) and action \( a \),
+- \( R \) is the reward received,
+- \( \gamma \) is the discount factor,
+- \( Q(s', a') \) is the Q-value for the next state \( s' \) and action \( a' \).
+
+SARSA uses an **epsilon-greedy** policy to choose actions, exploring with a probability of \( \epsilon \) and exploiting the best action with probability \( 1 - \epsilon \).
+
+### **SARSA(λ)**
+SARSA(λ) is an extension of SARSA that incorporates **eligibility traces** to allow faster learning by updating multiple state-action pairs during a single transition. The eligibility trace acts as a memory, allowing previous state-action pairs to contribute to the update. The update rule is:
+
+\[
+Q(s, a) \leftarrow Q(s, a) + \alpha \left[ R + \gamma Q(s', a') - Q(s, a) \right] \cdot E(s, a)
+\]
+\[
+E(s, a) \leftarrow \gamma \lambda E(s, a)
+\]
+
+Where:
+- \( E(s, a) \) is the eligibility trace for state \( s \) and action \( a \),
+- \( \lambda \) is the trace decay factor (0 ≤ \( \lambda \) ≤ 1), controlling how much influence previous state-action pairs have on updates.
+
+SARSA(λ) enhances learning by updating not just the current state-action pair but also previously visited state-action pairs, speeding up the convergence process.
+
 ## Conclusion
 
 The **PathFinder** framework offers a simple yet powerful way to apply reinforcement learning to pathfinding problems in graphs. By visualizing both the initial graph and the learned path, users can gain insights into the algorithm's performance and decision-making process.
