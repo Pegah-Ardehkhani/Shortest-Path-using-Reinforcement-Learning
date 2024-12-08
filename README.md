@@ -155,4 +155,4 @@ SARSA(λ) enhances learning by updating not just the current state-action pair b
 
 ## Conclusion
 
-The **PathFinder** framework offers a simple yet powerful way to apply reinforcement learning to pathfinding problems in graphs. By visualizing both the initial graph and the learned path, users can gain insights into the algorithm's performance and decision-making process.
+The **ShortestPathFinder** framework offers a simple yet powerful way to apply reinforcement learning to pathfinding problems in graphs. By visualizing both the initial graph and the learned path, users can gain insights into the algorithm's performance and decision-making process.
