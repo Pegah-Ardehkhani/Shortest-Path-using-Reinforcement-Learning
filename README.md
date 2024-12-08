@@ -1,4 +1,4 @@
-# Shortest Path Finder using Reinforcement Learning 🏍️ ![license](https://img.shields.io/github/license/Pegah-Ardehkhani/Shortest-Path-using-Reinforcement-Learning.svg)
+# Shortest Path Finder using Reinforcement Learning 🏍️ ![license](https://img.shields.io/github/license/Pegah-Ardehkhani/Shortest-Path-using-Reinforcement-Learning.svg) <a href="https://colab.research.google.com/github/Pegah-Ardehkhani/Shortest-Path-using-Reinforcement-Learning/blob/main/RL%20Shortest%20Path.ipynb" target="_parent\"><img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/></a> [![nbviewer](https://img.shields.io/badge/render-nbviewer-orange.svg)](http://nbviewer.org/github/Pegah-Ardehkhani/Shortest-Path-using-Reinforcement-Learning/blob/main/RL%20Shortest%20Path.ipynb)
 
 <p align="center"> 
   <img width="600" height="400" src="https://github.com/Pegah-Ardehkhani/Shortest-Path-using-Reinforcement-Learning/blob/main/Learned_Path_Pic.png"> 
