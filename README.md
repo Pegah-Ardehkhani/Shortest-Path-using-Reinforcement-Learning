@@ -137,7 +137,7 @@ Where:
 
 SARSA uses an **epsilon-greedy** policy to choose actions, exploring with a probability of $( \epsilon )$ and exploiting the best action with probability $( 1 - \epsilon )$.
 
-### **SARSA(λ)**
+- **SARSA(λ)**
 SARSA(λ) is an extension of SARSA that incorporates **eligibility traces** to allow faster learning by updating multiple state-action pairs during a single transition. The eligibility trace acts as a memory, allowing previous state-action pairs to contribute to the update. The update rule is:
 
 $Q(s, a) \leftarrow Q(s, a) + \alpha \left[ R + \gamma Q(s', a') - Q(s, a) \right] \cdot E(s, a)$
