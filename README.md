@@ -88,16 +88,28 @@ The main function `shortestpathfinder()` accepts the following arguments:
 
 ```plaintext
 Episode 1/300
-Starting state: 0
-Current state: 0 -> Next state: 1
-  Edge weight (distance): 1  Reward: -1
-  Updated Q-table: 0.0900
 ...
-Episode 300 completed. Path length: 10.5
 --------------------------------------------------
-Time taken to complete q_learning: 15.24 seconds
-Learned path from node 0 to node 11: [0, 1, 3, 5, 6, 10, 11]
-Path length: 10.5
+Episode 300/300
+Starting state: 0
+  Current state: 0 -> Next state: 1
+    Edge weight (distance): 1  Reward: -1
+    Updated Q-table: -3.7520
+  Current state: 1 -> Next state: 4
+    Edge weight (distance): 2  Reward: -2
+    Updated Q-table: -3.4400
+  Current state: 4 -> Next state: 8
+    Edge weight (distance): 1  Reward: -1
+    Updated Q-table: -1.8000
+  Current state: 8 -> Next state: 11
+    Edge weight (distance): 1  Reward: -1
+    Updated Q-table: -1.0000
+  Goal state 11 reached!
+Episode 300 completed. Path length: 5
+--------------------------------------------------
+Time taken to complete q_learning: 0.23 seconds
+Learned path from node 0 to node 11: [0, 1, 4, 8, 11]
+Path length: 5
 ```
 
 ### Visualization
