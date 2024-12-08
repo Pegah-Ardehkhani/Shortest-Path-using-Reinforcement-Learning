@@ -110,10 +110,6 @@ After the algorithm finishes training, the program will visualize the graph usin
 
 ## Algorithm Details
 
-- **Q-learning**: The agent learns a policy by interacting with the environment (graph), updating Q-values to choose the most rewarding path.
-- **SARSA**: Similar to Q-learning, but updates are based on the action actually taken (on-policy).
-- **SARSA(λ)**: An extension of SARSA with eligibility traces, allowing faster learning.
-
 - **Q-learning**
 Q-learning is an off-policy reinforcement learning algorithm where the agent learns the optimal action-value function without requiring the environment to follow the same policy. The agent updates the Q-values by using the Bellman equation:
 
@@ -128,20 +124,18 @@ Where:
 
 The agent explores the environment using an **epsilon-greedy** strategy, balancing exploration (random actions) with exploitation (choosing the action with the highest Q-value).
 
-### **SARSA**
+- **SARSA**
 SARSA (State-Action-Reward-State-Action) is an on-policy algorithm, meaning it updates Q-values based on the action the agent actually takes, rather than the optimal action (like Q-learning). The SARSA update rule is:
 
-\[
-Q(s, a) \leftarrow Q(s, a) + \alpha \left[ R + \gamma Q(s', a') - Q(s, a) \right]
-\]
+$Q(s, a) \leftarrow Q(s, a) + \alpha \left[ R + \gamma Q(s', a') - Q(s, a) \right]$
 
 Where:
-- \( Q(s, a) \) is the Q-value for state \( s \) and action \( a \),
-- \( R \) is the reward received,
-- \( \gamma \) is the discount factor,
-- \( Q(s', a') \) is the Q-value for the next state \( s' \) and action \( a' \).
+- $( Q(s, a) )$ is the Q-value for state $( s )$ and action $( a )$,
+- $( R )$ is the reward received,
+- $( \gamma )$ is the discount factor,
+- $( Q(s', a') )$ is the Q-value for the next state $( s' )$ and action $( a' )$.
 
-SARSA uses an **epsilon-greedy** policy to choose actions, exploring with a probability of \( \epsilon \) and exploiting the best action with probability \( 1 - \epsilon \).
+SARSA uses an **epsilon-greedy** policy to choose actions, exploring with a probability of $( \epsilon )$ and exploiting the best action with probability $( 1 - \epsilon )$.
 
 ### **SARSA(λ)**
 SARSA(λ) is an extension of SARSA that incorporates **eligibility traces** to allow faster learning by updating multiple state-action pairs during a single transition. The eligibility trace acts as a memory, allowing previous state-action pairs to contribute to the update. The update rule is:
